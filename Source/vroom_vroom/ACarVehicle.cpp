@@ -40,14 +40,7 @@ void AACarVehicle::Tick(float DeltaTime)
 	CarMesh->AddTorqueInRadians(Torque);
 
 }
-void AMyGameMode::StartLocalCoop(int PlayerCount)
-{
-	for (int i = 0; i < PlayerCount; i++)
-	{
-		APlayerController* PC = UGameplayStatics::CreatePlayer(GetWorld(), i);
-		PC->Possess(SpawnCarForPlayer(i));
-	}
-}
+
 void AACarVehicle::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
